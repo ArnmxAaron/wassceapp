@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyncSphere - Organize Your Digital World</title>
-    <meta name="description" content="Download the SyncSphere app for Android to organize your files, notes, and tasks in one place.">
+    <title>WASSCE Ace - Your Guide to Exam Success</title>
+    <meta name="description" content="The best app to pass WASSCE in Sierra Leone. Access past questions, video lessons, and study notes to ace your exams.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,7 +40,7 @@
             box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
         }
         
-        /* Animation for sections fading in on scroll */
+        /* Animation for sections fading in on load */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -52,8 +52,35 @@
             }
         }
         .fade-in-section {
-            /* This can be triggered by JS, but for a simple load we'll apply it directly */
             animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* --- NEW STYLES FOR SCROLLING TESTIMONIALS --- */
+        #testimonials-container {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        @keyframes scrollHorizontally {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Translate by half the width (since content is duplicated) */
+        }
+
+        .scrolling-wrapper {
+            display: flex;
+            width: fit-content; /* Let the container size itself to fit all children */
+            animation: scrollHorizontally 200s linear infinite; /* Adjust time for speed */
+        }
+
+        .scrolling-wrapper:hover {
+            animation-play-state: paused; /* Pause animation on hover */
+        }
+
+        .testimonial-card {
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            width: 350px; /* Fixed width for each card */
+            margin: 0 1rem; /* Spacing between cards */
         }
     </style>
 </head>
@@ -67,9 +94,9 @@
             <nav class="flex justify-between items-center mb-16 md:mb-24">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                        <i class="fa-solid fa-sync text-lg text-white"></i>
+                        <i class="fa-solid fa-graduation-cap text-lg text-white"></i>
                     </div>
-                    <span class="text-xl font-bold text-gray-800">SyncSphere</span>
+                    <span class="text-xl font-bold text-gray-800">WASSCE Ace</span>
                 </div>
             </nav>
 
@@ -77,26 +104,26 @@
                 
                 <!-- Left Column: Text & CTA -->
                 <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-                        Your entire digital world, organized in one place.
+                    <h1 class="text-2xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        Unlock Your WASSCE Success. Ace Your Exams.
                     </h1>
                     <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                        SyncSphere brings your files, notes, and tasks together, making you more productive than ever before.
+                        The best app to pass WASSCE. Access thousands of past questions, detailed notes, and expert video lessons right from your phone.
                     </p>
                     
                     <!-- Single Download Button -->
                     <div class="flex flex-col items-center md:items-start">
-                        <a href="/path/to/your/app.apk" download class="cta-button text-white font-bold py-4 px-10 rounded-full text-lg w-full sm:w-auto flex items-center justify-center space-x-3">
+                        <a href="https://builder.andromo.com/project/download/4227417/" download class="cta-button text-white font-bold py-4 px-10 rounded-full text-lg w-full sm:w-auto flex items-center justify-center space-x-3">
                             <i class="fa-brands fa-android text-2xl"></i>
-                            <span>Download for Android</span>
+                            <span>Download the App</span>
                         </a>
-                        <p class="text-sm text-gray-500 mt-3">Version 1.0.1 | Requires Android 8.0+</p>
+                        <p class="text-sm text-gray-500 mt-3">Version 1.0.1 | Free Download</p>
                     </div>
                 </div>
 
                 <!-- Right Column: Smartphone Mockup -->
                 <div class="md:w-1/2 flex justify-center">
-              <img src="screenshot.jpg" alt="Smartphone mockup showcasing the SyncSphere app" class="w-64 md:w-80 rounded-3xl shadow-2xl">
+                    <img src="screenshot.jpg" alt="Smartphone mockup showcasing the WASSCE Ace app" class="w-64 md:w-80 rounded-3xl shadow-2xl">
                 </div>
 
             </div>
@@ -106,52 +133,146 @@
             <!-- ===== FEATURES SECTION ===== -->
             <section class="py-24 fade-in-section" style="animation-delay: 200ms;">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-900">A Simpler Way to Work</h2>
-                    <p class="text-gray-600 mt-2">All the features you need to stay organized and productive.</p>
+                    <h2 class="text-3xl font-bold text-gray-900">Everything You Need to Succeed</h2>
+                    <p class="text-gray-600 mt-2">Study smarter, not harder, with tools designed for WASSCE candidates.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                     <!-- Feature 1 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-cloud-sync text-2xl"></i>
+                            <i class="fa-solid fa-file-alt text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Seamless Syncing</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Past Questions</h3>
                         <p class="text-gray-600">
-                            Access your data from any device. Your information is always up-to-date, everywhere.
+                            Practice with thousands of real WASSCE past questions with detailed, step-by-step solutions.
                         </p>
                     </div>
                     
                     <!-- Feature 2 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-shield-alt text-2xl"></i>
+                            <i class="fa-solid fa-video text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ironclad Security</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Video Lessons</h3>
                         <p class="text-gray-600">
-                            With end-to-end encryption, your data is private and protected at all times.
+                            Understand difficult topics with easy-to-follow video tutorials from expert teachers.
                         </p>
                     </div>
                     
                     <!-- Feature 3 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-share-alt text-2xl"></i>
+                            <i class="fa-solid fa-download text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Effortless Sharing</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Offline Access</h3>
                         <p class="text-gray-600">
-                            Collaborate with your team or share files with friends and family with a single click.
+                            No internet? No problem. Download lessons and questions to study anytime, anywhere.
                         </p>
                     </div>
+                </div>
+            </section>
+
+            <!-- ===== TESTIMONIALS SECTION ===== -->
+            <section class="py-24 fade-in-section" style="animation-delay: 400ms;">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900">Join Thousands of Successful Students</h2>
+                    <p class="text-gray-600 mt-2">Hear what students from across Sierra Leone are saying about WASSCE Ace.</p>
+                </div>
+
+                <div id="testimonials-container">
+                    <!-- Testimonials will be dynamically inserted here by JavaScript -->
                 </div>
             </section>
         </main>
     </div>
     
     <!-- ===== FOOTER ===== -->
-    <footer class="text-center py-8 border-t border-gray-200">
-        <p class="text-gray-500">&copy; 2025 SyncSphere. All rights reserved.</p>
+    <footer class="text-center py-8 mt-16 border-t border-gray-200">
+        <p class="text-gray-500">&copy; 2025 WASSCE Ace. All rights reserved.</p>
     </footer>
 
+    <script>
+        const testimonials = [
+            { name: "Aminata S., Freetown", school: "Annie Walsh Memorial School", quote: "This app was a game-changer for me. I used the past questions every day and passed all my subjects with good grades. Thank you, WASSCE Ace!" },
+            { name: "Mohamed K., Bo", school: "Bo Government Secondary School", quote: "The video lessons for Mathematics were so clear and easy to understand. It helped me finally grasp topics I struggled with all year." },
+            { name: "Fatmata B., Kenema", school: "Kenema Government Secondary School", quote: "The offline access is the best feature! I could study on my way to school without worrying about internet connection. Highly recommend." },
+            { name: "David T., Freetown", school: "Prince of Wales", quote: "I felt so much more confident going into the exam hall. Practicing with the timed quizzes made me faster and more accurate." },
+            { name: "Isatu J., Makeni", school: "St. Francis Secondary School", quote: "Honestly, the best WASSCE prep tool out there. The detailed solutions for the past questions were incredibly helpful." },
+            { name: "Samuel G., Freetown", school: "Albert Academy", quote: "I recommended this app to all my friends. We formed a study group and used the app to quiz each other. We all passed!" },
+            { name: "Mariama C., Bo", school: "Christ the King College", quote: "The English language section, especially the summary notes, saved me. It made revision so much quicker and more effective." },
+            { name: "John A., Kenema", school: "Holy Trinity Secondary School", quote: "I was worried about Physics, but the video lessons broke down everything. I ended up getting a B2!" },
+            { name: "Adama L., Freetown", school: "FSSG", quote: "Simple, easy to use, and has everything you need. No distractions, just pure learning. 10/10." },
+            { name: "Ibrahim K., Makeni", school: "Benevolent Islamic Secondary School", quote: "The mock exams are a must-try. They give you a real feel of the pressure and timing of the actual WASSCE." },
+            { name: "Theresa M., Freetown", school: "St. Joseph's Convent", quote: "I love that I can track my progress and see which topics I need to focus on more. It made my study schedule so efficient." },
+            { name: "Sorie C., Bo", school: "Queen of the Rosary Secondary School", quote: "The best investment I made for my exams. Better than any textbook I bought." },
+            { name: "Abibatu S., Koidu", school: "Koidu Secondary School", quote: "Even with the unreliable internet here, the offline feature meant I never missed a day of study. Thank you for thinking of us." },
+            { name: "Emmanuel P., Freetown", school: "Methodist Boys' High School", quote: "The explanations for the science practicals were a lifesaver. I understood the concepts better than I did in class." },
+            { name: "Hassan B., Port Loko", school: "Port Loko Catholic Secondary School", quote: "From failing my mocks to getting credits in all my core subjects. This app is the reason." },
+            { name: "Zainab K., Freetown", school: "Government Model Secondary School", quote: "I could study at my own pace, rewind videos, and re-read notes whenever I wanted. It gave me control over my learning." },
+            { name: "Peter T., Makeni", school: "Makeni Comprehensive Academy", quote: "The user interface is so clean. It's easy to find exactly what you're looking for without getting lost." },
+            { name: "Kadiatu T., Bo", school: "Ahmadiyya Muslim Secondary School", quote: "My parents were so proud of my results. I told them this app was my secret weapon." },
+            { name: "Umaru J., Kenema", school: "Islamic Secondary School", quote: "Passed my Chemistry exam because of the practice questions on this app. The patterns are all there!" },
+            { name: "Grace J., Freetown", school: "The Vine Memorial Secondary School", quote: "I felt like I had a private tutor in my pocket. Amazing resource for any WASSCE candidate." },
+            { name: "Abdulai S., Lungi", school: "Lungi Government Secondary School", quote: "Worth every Leone. The amount of content you get is unbelievable. All subjects are covered." },
+            { name: "Beatrice H., Freetown", school: "International School Limited", quote: "As a private candidate, this app provided the structure I needed to study effectively on my own." },
+            { name: "Saidu B., Makeni", school: "Birch Memorial Secondary School", quote: "I finally understood Economics because of this app. The examples used were so relatable and easy to follow." },
+            { name: "N'gadie W., Bo", school: "CKC", quote: "The best part is that it's always being updated with new questions and lessons. It never gets old." },
+            { name: "Michael K., Freetown", school: "Sierra Leone Grammar School", quote: "The performance analytics showed me my weak areas, so I knew exactly what to focus my energy on. Smartest way to study." },
+            { name: "Kadie A., Kenema", school: "Holy Rosary Secondary School", quote: "I wish I had this app for my junior secondary exams! It makes studying so much less stressful." },
+            { name: "Alhaji B., Freetown", school: "Ansarul Islamic Secondary School", quote: "The solved past questions from 2010 to last year were the most valuable resource for me. A must-have." },
+            { name: "Jeneba S., Makeni", school: "Every Nation Academy", quote: "My entire study group downloaded WASSCE Ace. It made our group discussions so much more productive." },
+            { name: "Mustapha T., Bo", school: "Bo School", quote: "The teachers in the videos are excellent. They explain things in a way that just clicks." },
+            { name: "Sarah W., Freetown", school: "St. Helena Secondary School", quote: "I passed Literature with a distinction thanks to the character analysis notes and theme breakdowns." },
+            { name: "Abu K., Waterloo", school: "Peninsular Secondary School", quote: "Using this app felt like I was one step ahead of everyone else. It gave me a huge advantage." },
+            { name: "Margaret F., Freetown", school: "Limount College", quote: "I was able to fit in study sessions anytime, even on the bus. The app is so convenient." },
+            { name: "Brima S., Makeni", school: "U.M.C Secondary School", quote: "I used to hate Government, but the app's notes were so concise and well-organized that it became one of my best subjects." },
+            { name: "Fatima K., Kenema", school: "St. Charles Lwanga", quote: "Passed all 9 of my subjects. This app is a blessing for students in Sierra Leone." },
+            { name: "Gibril C., Freetown", school: "A.J. Momoh Secondary School", quote: "The constant practice on the app removed all my exam anxiety. I was calm and prepared." },
+            { name: "Nancy P., Bo", school: "Laura Dove Secondary School", quote: "I'm recommending this to my younger sister for her exams next year. Every student needs this." },
+            { name: "Kelvin D., Freetown", school: "Government Rokel Secondary School", quote: "The app is fast, doesn't crash, and doesn't use a lot of data when you do need to be online. Perfectly made for us." },
+            { name: "Memunatu J., Makeni", school: "Northern Polytechnic", quote: "I'm now in university, and I can honestly say this app helped me build the foundation I needed to get here." },
+            { name: "Patrick L., Freetown", school: "Bishop Johnson Memorial School", quote: "The history timelines and notes were fantastic. Made remembering dates and events so much easier." },
+            { name: "Juliana G., Kenema", quote: "The step-by-step solutions for math problems are better than any textbook. I could actually see where I was going wrong.", school: "Kenema Secondary School" },
+            { name: "Santigie K., Freetown", quote: "I was a science student and the detailed diagrams and explanations for Biology were top-notch. It helped me visualize everything.", school: "Prince of Wales" },
+            { name: "Baindu M., Bo", quote: "The offline feature is a life-saver in Bo. I downloaded everything I needed at night and studied all day without internet.", school: "Christ the King College" },
+            { name: "Sheku T., Makeni", quote: "This app helped me improve my grades from C's and D's in my mock exams to B's in the real WASSCE. I am so grateful.", school: "St. Francis Secondary School" },
+            { name: "Janet K., Freetown", quote: "The video lessons are short and to the point. The teachers don't waste your time, they just teach you what you need to know.", school: "Annie Walsh" },
+            { name: "Ahmed F., Freetown", quote: "I was struggling with Financial Accounting, but the practice questions on WASSCE Ace covered every possible topic. I passed with a credit!", school: "Albert Academy" },
+            { name: "Yeabu S., Kenema", quote: "This app is proof that you don't need expensive lessons to pass WASSCE. All you need is your phone and this app.", school: "Holy Trinity Secondary School" },
+            { name: "Josephine E., Freetown", quote: "The summary notes are perfect for last-minute revision. It helped me refresh my memory on key points right before the exam.", school: "St. Joseph's Convent" },
+            { name: "Lamin D., Bo", quote: "My confidence soared after using this app for a month. Seeing my scores improve on the quizzes motivated me to work even harder.", school: "Bo School" },
+            { name: "Hawa A., Makeni", quote: "The search function is great. I could quickly find specific topics I wanted to revise without scrolling through everything.", school: "Benevolent Islamic School" },
+            { name: "Daniel M., Freetown", quote: "Passed my English exam easily. The app had so many examples of formal letter writing and comprehension passages.", school: "Methodist Boys' High School" },
+            { name: "Christiana H., Freetown", quote: "It's the most complete study app for WASSCE. It has questions, notes, and videos. Everything you need is in one place.", school: "FSSG" },
+            { name: "Momoh S., Kenema", quote: "I used this app for all three of my science subjects and passed them all. The science section is very strong.", school: "Kenema Government Secondary School" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('testimonials-container');
+            // Create the wrapper that will be animated
+            const wrapper = document.createElement('div');
+            wrapper.className = 'scrolling-wrapper';
+            
+            // Duplicate testimonials for a seamless loop
+            const allTestimonials = [...testimonials, ...testimonials];
+
+            allTestimonials.forEach(testimonial => {
+                const card = document.createElement('div');
+                card.className = 'testimonial-card bg-white p-6 rounded-xl shadow-md border border-gray-200 flex flex-col';
+                card.innerHTML = `
+                    <p class="text-gray-600 italic mb-4 flex-grow">“${testimonial.quote}”</p>
+                    <div>
+                        <p class="font-bold text-gray-900">${testimonial.name}</p>
+                        <p class="text-sm text-gray-500">${testimonial.school}</p>
+                    </div>
+                `;
+                wrapper.appendChild(card);
+            });
+
+            container.appendChild(wrapper);
+        });
+    </script>
 </body>
 </html>
+
