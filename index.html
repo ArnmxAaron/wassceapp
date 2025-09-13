@@ -6,13 +6,10 @@
     <title>WASSCE Ace - Your Guide to Exam Success</title>
     <meta name="description" content="The best app to pass WASSCE in Sierra Leone. Access past questions, video lessons, and study notes to ace your exams.">
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome CDN for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -55,7 +52,7 @@
             animation: fadeIn 0.8s ease-out forwards;
         }
 
-        /* --- NEW STYLES FOR SCROLLING TESTIMONIALS --- */
+        /* --- STYLES FOR SCROLLING TESTIMONIALS --- */
         #testimonials-container {
             overflow: hidden;
             -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -88,9 +85,7 @@
 
     <div class="container mx-auto px-6 py-8">
 
-        <!-- ===== HERO SECTION ===== -->
         <header class="fade-in-section">
-            <!-- Navigation -->
             <nav class="flex justify-between items-center mb-16 md:mb-24">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
@@ -102,7 +97,6 @@
 
             <div class="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0">
                 
-                <!-- Left Column: Text & CTA -->
                 <div class="md:w-1/2 text-center md:text-left">
                     <h1 class="text-2xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
                         Unlock Your WASSCE Success. Ace Your Exams.
@@ -111,17 +105,26 @@
                         The best app to pass WASSCE. Access thousands of past questions, detailed notes, and expert video lessons right from your phone.
                     </p>
                     
-                    <!-- Single Download Button -->
                     <div class="flex flex-col items-center md:items-start">
-                        <a href="https://builder.andromo.com/project/download/4227417/" download class="cta-button text-white font-bold py-4 px-10 rounded-full text-lg w-full sm:w-auto flex items-center justify-center space-x-3">
+                        <a href="https://builder.andromo.com/project/download/4227417/" id="download-btn" download class="cta-button text-white font-bold py-4 px-10 rounded-full text-lg w-full sm:w-auto flex items-center justify-center space-x-3">
                             <i class="fa-brands fa-android text-2xl"></i>
                             <span>Download the App</span>
                         </a>
                         <p class="text-sm text-gray-500 mt-3">Version 1.0.1 | Free Download</p>
-                    </div>
+                        
+                        <div class="flex items-center space-x-6 mt-6 text-gray-600">
+                            <div class="text-center">
+                                <p class="font-bold text-lg text-gray-800"><span id="download-count">10,000</span>+</p>
+                                <p class="text-xs">Downloads</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-bold text-lg text-gray-800">5,000+</p>
+                                <p class="text-xs">Active Users</p>
+                            </div>
+                        </div>
+                        </div>
                 </div>
 
-                <!-- Right Column: Smartphone Mockup -->
                 <div class="md:w-1/2 flex justify-center">
                     <img src="screenshot.jpg" alt="Smartphone mockup showcasing the WASSCE Ace app" class="w-64 md:w-80 rounded-3xl shadow-2xl">
                 </div>
@@ -130,7 +133,6 @@
         </header>
 
         <main>
-            <!-- ===== FEATURES SECTION ===== -->
             <section class="py-24 fade-in-section" style="animation-delay: 200ms;">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900">Everything You Need to Succeed</h2>
@@ -138,7 +140,6 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <!-- Feature 1 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                             <i class="fa-solid fa-file-alt text-2xl"></i>
@@ -149,7 +150,6 @@
                         </p>
                     </div>
                     
-                    <!-- Feature 2 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                             <i class="fa-solid fa-video text-2xl"></i>
@@ -160,7 +160,6 @@
                         </p>
                     </div>
                     
-                    <!-- Feature 3 -->
                     <div class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                             <i class="fa-solid fa-download text-2xl"></i>
@@ -173,7 +172,6 @@
                 </div>
             </section>
 
-            <!-- ===== TESTIMONIALS SECTION ===== -->
             <section class="py-24 fade-in-section" style="animation-delay: 400ms;">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900">Join Thousands of Successful Students</h2>
@@ -181,13 +179,11 @@
                 </div>
 
                 <div id="testimonials-container">
-                    <!-- Testimonials will be dynamically inserted here by JavaScript -->
-                </div>
+                    </div>
             </section>
         </main>
     </div>
     
-    <!-- ===== FOOTER ===== -->
     <footer class="text-center py-8 mt-16 border-t border-gray-200">
         <p class="text-gray-500">&copy; 2025 WASSCE Ace. All rights reserved.</p>
     </footer>
@@ -249,12 +245,10 @@
         ];
 
         document.addEventListener('DOMContentLoaded', function() {
+            // --- Testimonial Scroller Logic ---
             const container = document.getElementById('testimonials-container');
-            // Create the wrapper that will be animated
             const wrapper = document.createElement('div');
             wrapper.className = 'scrolling-wrapper';
-            
-            // Duplicate testimonials for a seamless loop
             const allTestimonials = [...testimonials, ...testimonials];
 
             allTestimonials.forEach(testimonial => {
@@ -269,10 +263,34 @@
                 `;
                 wrapper.appendChild(card);
             });
-
             container.appendChild(wrapper);
+
+            // --- START: NEW DOWNLOAD COUNTER LOGIC ---
+            const downloadBtn = document.getElementById('download-btn');
+            const downloadCountSpan = document.getElementById('download-count');
+            
+            // Get the current count from localStorage, or start at 10000
+            let currentDownloads = parseInt(localStorage.getItem('appDownloads') || '10000');
+            
+            // Function to format the number with a comma
+            const formatNumber = (num) => new Intl.NumberFormat().format(num);
+
+            // Display the initial count
+            downloadCountSpan.textContent = formatNumber(currentDownloads);
+
+            // Add an event listener to the download button
+            downloadBtn.addEventListener('click', () => {
+                // Increment the count
+                currentDownloads++;
+                
+                // Save the new count to localStorage
+                localStorage.setItem('appDownloads', currentDownloads);
+                
+                // Update the text on the page
+                downloadCountSpan.textContent = formatNumber(currentDownloads);
+            });
+            // --- END: NEW DOWNLOAD COUNTER LOGIC ---
         });
     </script>
 </body>
 </html>
-
